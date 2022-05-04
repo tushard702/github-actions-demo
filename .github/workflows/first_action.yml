@@ -1,0 +1,14 @@
+name: first action
+
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: eg-default
+    steps:
+      - name: echo a string
+        run: echo "hello world"
+      - name: multiline
+        run: |
+              node -v
+              npm -v
